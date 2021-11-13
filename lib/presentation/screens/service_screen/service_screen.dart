@@ -14,14 +14,19 @@ class ServiceScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int i = 0;
     return Scaffold(
       appBar: serviceAppbar(context),
       body: Body(),
-      floatingActionButton: IconButton(
-        onPressed: (){
-          BlocProvider.of<ServiceselectionCubit>(context).update();
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.accessibility_outlined),
+        backgroundColor: AppColors.greenColor,
+        onPressed: () {
+          if(i<2){
+                  BlocProvider.of<ServiceselectionCubit>(context).update();
+                  i++;
+                }
         },
-        icon: Icon(Icons.access_alarms_outlined),
       ),
     );
   }
