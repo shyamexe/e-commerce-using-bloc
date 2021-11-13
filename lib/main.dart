@@ -1,3 +1,4 @@
+import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,13 +15,21 @@ void main() {
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: Strings.appTitle,
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
-      debugShowCheckedModeBanner: false,
-      initialRoute: AppRouter.service,
-      onGenerateRoute: AppRouter.onGenerateRoute,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<ServiceselectionCubit>(
+          create: (context)=>
+              ServiceselectionCubit(),
+        )
+      ],
+      child: MaterialApp(
+        title: Strings.appTitle,
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        debugShowCheckedModeBanner: false,
+        initialRoute: AppRouter.service,
+        onGenerateRoute: AppRouter.onGenerateRoute,
+      ),
     );
   }
 }
