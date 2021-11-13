@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SvgPicture.asset(
-              AppIcons.favorateRed,
+              AppIcons.favourateRed,
               height: 100,
               color: Colors.indigo,
             ),
