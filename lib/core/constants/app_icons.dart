@@ -1,8 +1,7 @@
-class Strings {
-  // App
-  static final cartIcon = 'asset/icons/cart.png';
+class AppIcons {
+  // icons
+  static final favorateRed = "assets/icons/favorate_red.svg";
 
   // HomeScreen
-  static final homeScreenTitle = 'Home Screen';
-  static final homeScreenCenterText = 'Welcome to Flutterly!';
+ 
 }
