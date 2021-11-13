@@ -1,10 +1,11 @@
 part of 'serviceselection_cubit.dart';
 
-abstract class ServiceselectionState extends Equatable {
-  const ServiceselectionState();
+class ServiceselectionState {
+  int pageValue;
 
-  @override
-  List<Object> get props => [];
+  ServiceselectionState({
+    required this.pageValue,
+  });
 }
 
-class ServiceselectionInitial extends ServiceselectionState {}
+
