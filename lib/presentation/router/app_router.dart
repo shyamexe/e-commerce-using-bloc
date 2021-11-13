@@ -1,3 +1,4 @@
+import 'package:e_commerce/presentation/screens/service_screen/service_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/constants/strings.dart';
@@ -6,6 +7,7 @@ import '../screens/home_screen/home_screen.dart';
 
 class AppRouter {
   static const String home = '/';
+  static const String service ='/service';
 
   const AppRouter._();
 
@@ -15,6 +17,13 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => HomeScreen(
             title: Strings.homeScreenTitle,
+            
+          ),
+        );
+      case service:
+        return MaterialPageRoute(
+          builder: (_) => ServiceScreen(
+           
           ),
         );
       default:

@@ -14,7 +14,7 @@ class AppIcons {
   static const homeIcon = "assets/icons/home.svg";
   static const notificationIcon = "assets/icons/notification.svg";
   static const quizIcon = "assets/icons/cart.svg";
-  static const srearchIcon = "assets/icons/search.svg";
+  static const searchIcon = "assets/icons/search.svg";
   static const serviceIcon = "assets/icons/service.svg";
   static const shareIcon = "assets/icons/share_icon.svg";
   static const shopIcon = "assets/icons/shop.svg";
