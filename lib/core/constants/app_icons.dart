@@ -19,6 +19,7 @@ class AppIcons {
   static const shareIcon = "assets/icons/share_icon.svg";
   static const shopIcon = "assets/icons/shop.svg";
   static const userIcon = "assets/icons/user_icon.svg";
+  static const byeIcon = "assets/icons/bye.svg";
 
 }
 class AppImage{

@@ -37,6 +37,7 @@ dependencies:
   flutter_svg: ^0.23.0+1
   hydrated_bloc: ^7.1.0
   path_provider: ^2.0.6
+  sizer: ^2.0.15
 
 dev_dependencies:
   flutter_lints: ^1.0.0
