@@ -1,6 +1,6 @@
+import 'package:e_commerce/core/constants/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:e_commerce/core/constants/app_icons.dart';
 import 'package:e_commerce/core/constants/strings.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,7 +21,12 @@ class HomeScreen extends StatelessWidget {
             SvgPicture.asset(
               AppIcons.favorateRed,
               height: 100,
-              color: Colors.greenAccent,
+              color: Colors.indigo,
+            ),
+            SvgPicture.asset(
+              AppIcons.backArrow,
+              height: 100,
+              color: Colors.indigo,
             ),
             Text(
               Strings.homeScreenCenterText,
