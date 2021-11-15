@@ -14,7 +14,6 @@ class ServiceScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int i = 0;
     return Scaffold(
       appBar: serviceAppbar(context),
       body: Body(),
@@ -22,10 +21,7 @@ class ServiceScreen extends StatelessWidget {
         child: Icon(Icons.accessibility_outlined),
         backgroundColor: AppColors.greenColor,
         onPressed: () {
-          if(i<2){
-                  BlocProvider.of<ServiceselectionCubit>(context).update();
-                  i++;
-                }
+          BlocProvider.of<ServiceselectionCubit>(context).update();     
         },
       ),
     );

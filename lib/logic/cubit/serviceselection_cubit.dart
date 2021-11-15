@@ -9,9 +9,19 @@ class ServiceselectionCubit extends Cubit<ServiceselectionState> {
           pageValue: 0,
         ));
     
-  void update() => emit(
+  void update() { 
+    if(state.pageValue < 2){
+    emit(
         ServiceselectionState(
           pageValue: state.pageValue + 1,
         ),
       );
+    }else{
+      emit(
+        ServiceselectionState(
+          pageValue: state.pageValue,
+        ),
+      );
+    }
+  }
 }

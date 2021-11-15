@@ -36,9 +36,9 @@ class _BodyState extends State<Body> {
               onValueChanged: (groupValue) {
                 print(groupValue);
 
-                if(state.pageValue<2){
-                  BlocProvider.of<ServiceselectionCubit>(context).update();
-                }
+                
+                BlocProvider.of<ServiceselectionCubit>(context).update();
+                
               },
             );
           },
