@@ -1,5 +1,5 @@
 import 'package:e_commerce/presentation/screens/service_screen/service_screen.dart';
-import 'package:e_commerce/presentation/screens/service_screen/widgets/navi.dart';
+import 'package:e_commerce/presentation/screens/commen/bottum_navigation_bar/bottum_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/constants/strings.dart';
@@ -29,7 +29,7 @@ class AppRouter {
         );
         case test: 
         return MaterialPageRoute(
-          builder: (_) => BtNav(),
+          builder: (_) => BottumNavigationBar(),
         );
       default:
         throw const RouteException('Route not found!');

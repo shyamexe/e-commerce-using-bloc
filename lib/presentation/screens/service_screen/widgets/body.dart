@@ -1,8 +1,10 @@
+import 'package:e_commerce/core/constants/app_icons.dart';
 import 'package:e_commerce/core/constants/strings.dart';
 import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:sizer/sizer.dart';
 
 
 class Body extends StatelessWidget {
@@ -35,7 +37,19 @@ class Body extends StatelessWidget {
               },
             );
           },
-        )
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+          decoration: BoxDecoration(border: Border.all(color: AppColors.greyColor)),
+          // width: 2.w,    //It will take a 20% of screen width
+          height:10.h,  
+          child: Row(
+            children: [
+              Image.asset(AppImage.lapTo1,width:300,height:100)
+            ],
+          ),  //It will take a 30% of screen height
+    )
+
       ],
     );
   }
