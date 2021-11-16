@@ -16,12 +16,13 @@ class ServiceselectionCubit extends Cubit<ServiceselectionState> {
           pageValue: state.pageValue + 1,
         ),
       );
-    }else{
-      emit(
-        ServiceselectionState(
-          pageValue: state.pageValue,
-        ),
-      );
     }
+    // else{
+    //   emit(
+    //     ServiceselectionState(
+    //       pageValue: state.pageValue,
+    //     ),
+    //   );
+    // }
   }
 }
