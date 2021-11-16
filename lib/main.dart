@@ -25,7 +25,7 @@ class App extends StatelessWidget {
         BlocProvider<BottamNavigationCubit>(
           create: (context)=>
               BottamNavigationCubit(),
-        )
+        ),
       ],
       child: MaterialApp(
         title: Strings.appTitle,
