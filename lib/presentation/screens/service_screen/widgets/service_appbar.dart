@@ -14,14 +14,13 @@ AppBar serviceAppbar(BuildContext context) {
         ),
       ),
       leading: IconButton(
+        color: AppColors.darkBlueColor,
         onPressed: () {
-         return Navigator.of(context).pop();
+        //  return Navigator.of(context).pop();
         },
-        icon: SvgPicture.asset(
-          AppIcons.backArrow,
-          color: AppColors.darkBlueColor,
+        icon: Icon(Icons.menu_rounded)
         ),
-      ),
+      
       actions: [
         IconButton(
           onPressed: () {},
@@ -39,4 +38,5 @@ AppBar serviceAppbar(BuildContext context) {
         ),
       ],
     );
+    
   }

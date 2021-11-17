@@ -23,13 +23,15 @@ class CustomListView extends StatelessWidget {
             child: Image.asset(
               image,
               fit: BoxFit.fill,
-              
             ),
           ),
           SizedBox(
             width: 5,
           ),
-          Text(productName),
+          Text(
+            productName,
+            style: TextStyle(fontSize: 20, color: AppColors.greenColor),
+          ),
         ],
       ),
     );

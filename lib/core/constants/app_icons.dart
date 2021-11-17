@@ -24,12 +24,13 @@ class AppIcons {
 }
 class AppImage{
   // images
-  static const desktop1 = "assets/images/desktop_01.png";
-  static const lapTop2 = "assets/images/laptop_02.png";
-  static const lapTo1 = "assets/images/desktop_01.png";
-  static const mobile1 = "assets/images/mobile_01.png";
-  static const monitor1 = "assets/images/monitor_01.png";
-  static const printer1 = "assets/images/printer_01.png";
-  static const projector = "assets/images/projecter_01.png";
-  static const tab1 = "assets/images/tab_01.png";
+
+  static const desktop1 = "assets/Images/desktop_01.png";
+  static const lapTop2 = "assets/Images/laptop_02.png";
+  static const lapTo1 = "assets/Images/laptop_01.png";
+  static const mobile1 = "assets/Images/mobile_01.png";
+  static const monitor1 = "assets/Images/monitor_01.png";
+  static const printer1 = "assets/Images/printer_01.png";
+  static const projector = "assets/Images/projecter_01.png";
+  static const tab1 = "assets/Images/tab_01.png";
 }

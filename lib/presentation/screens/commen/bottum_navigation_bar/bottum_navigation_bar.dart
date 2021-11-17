@@ -1,5 +1,4 @@
 import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
-import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:e_commerce/presentation/screens/home_screen/home_screen.dart';
 import 'package:e_commerce/presentation/screens/sales_screen/sales_screen.dart';
 import 'package:e_commerce/presentation/screens/service_screen/service_screen.dart';
@@ -9,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 
-class BtNav extends StatelessWidget {
+class BottumNavigationBar extends StatelessWidget {
   int selectedPage = 2;
   List<Widget> _pageOption = [
     
@@ -45,10 +44,7 @@ class BtNav extends StatelessWidget {
                 initialActiveIndex: state.navigationOrder,
                 onTap: (int index) {
 
-                  BlocProvider.of<BottamNavigationCubit>(context).setoder(index);  
-                  // setState(() {
-                  //   selectedPage = index;
-                  // });
+                  BlocProvider.of<BottamNavigationCubit>(context).setoder(index);
 
                 }),
           );
