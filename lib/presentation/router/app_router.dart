@@ -1,5 +1,6 @@
 import 'package:e_commerce/presentation/screens/sales_screen/sales_screen.dart';
 import 'package:e_commerce/presentation/screens/service_screen/service_screen.dart';
+import 'package:e_commerce/presentation/screens/service_screen/widgets/navi.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/constants/strings.dart';
@@ -10,7 +11,8 @@ class AppRouter {
   static const String home = '/';
   static const String service = '/service';
   static const String sales = '/sales';
-
+  static const String test ='/test';
+  
   const AppRouter._();
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -25,9 +27,14 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => ServiceScreen(),
         );
+
       case sales:
         return MaterialPageRoute(
           builder: (_) => SalesScreen(),
+        );
+        case test: 
+        return MaterialPageRoute(
+          builder: (_) => BtNav(),
         );
       default:
         throw const RouteException('Route not found!');

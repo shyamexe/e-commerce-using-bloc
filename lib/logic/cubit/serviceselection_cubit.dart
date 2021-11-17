@@ -17,5 +17,12 @@ class ServiceselectionCubit extends Cubit<ServiceselectionState> {
         ),
       );
     }
+    // else{
+    //   emit(
+    //     ServiceselectionState(
+    //       pageValue: state.pageValue,
+    //     ),
+    //   );
+    // }
   }
 }

@@ -1,10 +1,13 @@
+
 import 'package:e_commerce/logic/cubit/sales_cubit.dart';
+
 import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'core/constants/strings.dart';
 import 'core/themes/app_theme.dart';
+import 'logic/cubit/bottam_navigation_cubit.dart';
 import 'logic/debug/app_bloc_observer.dart';
 import 'presentation/router/app_router.dart';
 
@@ -22,17 +25,22 @@ class App extends StatelessWidget {
           create: (context)=>
               ServiceselectionCubit(),
         ),
+
         BlocProvider<SalesCubit>(
           create: (context)=>
-              SalesCubit(),
+              SalesCubit(),),
+
+        BlocProvider<BottamNavigationCubit>(
+          create: (context)=>
+              BottamNavigationCubit(),
         )
       ],
       child: MaterialApp(
         title: Strings.appTitle,
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
-        debugShowCheckedModeBanner: false,
-        initialRoute: AppRouter.sales,
+       
+        initialRoute: AppRouter.test,
         onGenerateRoute: AppRouter.onGenerateRoute,
       ),
     );
