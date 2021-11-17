@@ -1,5 +1,5 @@
 import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
-import 'package:e_commerce/presentation/screens/home_screen/home_screen.dart';
+import 'package:e_commerce/presentation/screens/home_screen/home_page.dart';
 import 'package:e_commerce/presentation/screens/sales_screen/sales_screen.dart';
 import 'package:e_commerce/presentation/screens/service_screen/service_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class BottumNavigationBar extends StatelessWidget {
     
     ServiceScreen(),
     SalesScreen(),
-    HomeScreen(title: 'title'),
+    HomePage(),
     ServiceScreen(),
     ServiceScreen(),
   ];

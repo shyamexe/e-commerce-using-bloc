@@ -4,7 +4,7 @@ import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sizer/sizer.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 
 class Body extends StatelessWidget {

@@ -1,11 +1,9 @@
-import 'package:e_commerce/core/constants/app_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 AppBar homeAppbar(BuildContext context) {
   return AppBar(
     elevation: 0,
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.transparent,
     title: Text(
       'E SQUARE',
       style: TextStyle(fontSize: 28,
@@ -14,26 +12,22 @@ AppBar homeAppbar(BuildContext context) {
       ),
     ),
     leading: IconButton(
-      onPressed: () {
-        return Navigator.of(context).pop();
-      },
+      onPressed: () {},
       icon: const Icon(Icons.menu_rounded),
-        color: Colors.black,
-      ),
+      color: Colors.green,
+    ),
     actions: [
       IconButton(
         onPressed: () {},
-        icon: SvgPicture.asset(
-          AppIcons.cartIcon,
-          color: Colors.indigo,
-        ),
+        icon: const Icon(Icons.qr_code_scanner_outlined, color: Colors.green,),
       ),
       IconButton(
         onPressed: () {},
-        icon: SvgPicture.asset(
-          AppIcons.notificationIcon,
-          color: Colors.indigo,
-        ),
+        icon: const Icon(Icons.shopping_cart_outlined, color: Colors.green,),
+      ),
+      IconButton(
+        onPressed: () {},
+        icon: const Icon(Icons.notifications_outlined, color: Colors.green,),
       ),
     ],
   );

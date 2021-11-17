@@ -1,0 +1,1 @@
+export 'hero_carousel_card_4__main_offer.dart';

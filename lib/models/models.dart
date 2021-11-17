@@ -1,0 +1,1 @@
+export 'main_offer_model_class.dart';
