@@ -1,6 +1,7 @@
 import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
 import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:e_commerce/presentation/screens/home_screen/home_screen.dart';
+import 'package:e_commerce/presentation/screens/sales_screen/sales_screen.dart';
 import 'package:e_commerce/presentation/screens/service_screen/service_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
@@ -13,7 +14,7 @@ class BtNav extends StatelessWidget {
   List<Widget> _pageOption = [
     
     ServiceScreen(),
-    ServiceScreen(),
+    SalesScreen(),
     HomeScreen(title: 'title'),
     ServiceScreen(),
     ServiceScreen(),
