@@ -146,7 +146,7 @@ class Body extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            'Ships Free',
+                            'Ships Freekk',
                             style: TextStyle(
                                 color:
                                     // themeChange.darkTheme
