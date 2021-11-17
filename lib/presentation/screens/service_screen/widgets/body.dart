@@ -163,7 +163,7 @@ class Body extends StatelessWidget {
                               onTap: () {},
                               child: Container(
                                 child: Padding(
-                                  padding: const EdgeInsets.all(5.0),
+                                  padding: EdgeInsets.all(5.0),
                                   child: Icon(
                                     Icons.remove,
                                     color: Colors.red,
