@@ -45,7 +45,7 @@ class Body extends StatelessWidget {
           height:10.h,  
           child: Row(
             children: [
-              Image.asset(AppImage.lapTo1,width:300,height:100)
+              Image.asset(AppImage.lapTo1,width:100,height:100)
             ],
           ),  //It will take a 30% of screen height
     )
