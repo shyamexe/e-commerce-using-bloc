@@ -12,11 +12,11 @@ class BottumNavigationBar extends StatelessWidget {
   int selectedPage = 2;
   List<Widget> _pageOption = [
     
-    ServiceScreen(),
-    SalesScreen(),
-    HomePage(),
-    ServiceScreen(),
-    ServiceScreen(),
+    const ServiceScreen(),
+    const SalesScreen(),
+    const HomePage(),
+    const ServiceScreen(),
+    const ServiceScreen(),
   ];
 
   @override
