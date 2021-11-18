@@ -55,6 +55,22 @@ class Body extends StatelessWidget {
         AppTileView(),
 
         //!ddd
+        Container(
+          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          decoration:
+              BoxDecoration(border: Border.all(color: AppColors.greyColor)),
+          // width: 2.w,    //It will take a 20% of screen width
+          height: 10.h,
+          child: Row(
+            children: [
+              Image.asset(
+                AppImage.lapTo1,
+                width: 100,
+                height: 100,
+              )
+            ],
+          ),
+        ),
 
        
       ],

@@ -24,7 +24,6 @@ class AppIcons {
 }
 class AppImage{
   // images
-
   static const desktop1 = "assets/images/desktop_01.png";
   static const lapTop2 = "assets/images/laptop_02.png";
   static const lapTo1 = "assets/images/laptop_01.png";
