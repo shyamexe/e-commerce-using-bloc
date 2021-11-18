@@ -1,12 +1,16 @@
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:e_commerce/core/constants/app_icons.dart';
 import 'package:e_commerce/core/constants/strings.dart';
 import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-
 import 'components/app_tile_View.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+
+import 'components/service_tile.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -14,64 +18,24 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      // physics: NeverScrollableScrollPhysics(parent:NeverScrollableScrollPhysics()),
       children: [
-        BlocBuilder<ServiceselectionCubit, ServiceselectionState>(
-          builder: (context, state) {
-            return CupertinoSegmentedControl<int>(
-              groupValue: state.pageValue,
-              borderColor: AppColors.greenColor,
-              selectedColor: AppColors.greenColor,
-              pressedColor: AppColors.greenColor.withOpacity(.29),
-              // padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
-              children: {
-                0: Text('Available Products'),
-                1: Text('Service History'),
-                2: Text('Open New Ticket'),
-              },
-              onValueChanged: (groupValue) {
-                print(groupValue);
-
-                BlocProvider.of<ServiceselectionCubit>(context).update();
-              },
-            );
-          },
-        ),
-        Container(
-          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          decoration:
-              BoxDecoration(border: Border.all(color: AppColors.greyColor)),
-          // width: 2.w,    //It will take a 20% of screen width
-          height: 10.h,
-          child: Row(
-            children: [
-              Image.asset(
-                AppImage.lapTo1,
-                width: 100,
-                height: 100,
-              )
-            ],
-          ),
-        ),
-        AppTileView(),
-
-        //!ddd
-        Container(
-          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          decoration:
-              BoxDecoration(border: Border.all(color: AppColors.greyColor)),
-          // width: 2.w,    //It will take a 20% of screen width
-          height: 10.h,
-          child: Row(
-            children: [
-              Image.asset(
-                AppImage.lapTo1,
-                width: 100,
-                height: 100,
-              )
-            ],
-          ),
-        ),
-
+        
+        
+      
+           ServiceTile(),
+           ServiceTile(),
+           ServiceTile(),
+           ServiceTile(),
+           ServiceTile(),
+           ServiceTile(),
+           ServiceTile(),
+           ServiceTile(),
+           ServiceTile(),
+           ServiceTile()
+        
+        
+        
        
       ],
     );
