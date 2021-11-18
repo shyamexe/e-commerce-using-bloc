@@ -1,11 +1,22 @@
-import 'package:e_commerce/core/constants/app_icons.dart';
-import 'package:e_commerce/core/constants/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+import 'package:e_commerce/core/constants/strings.dart';
+
 class ServiceTile extends StatelessWidget {
-  const ServiceTile({
+  String productTitle;
+  String productIcon;
+  bool productFavoriteFlag;
+  bool productStatus;
+  double starCount;
+
+  ServiceTile({
     Key? key,
+    required this.productTitle,
+    required this.productIcon,
+    required this.productFavoriteFlag,
+    required this.productStatus,
+    required this.starCount,
   }) : super(key: key);
 
   @override
@@ -23,7 +34,7 @@ class ServiceTile extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: Image.asset(
-                AppImage.tab1,
+                productIcon,
               ),
             ),
           ),
@@ -40,7 +51,7 @@ class ServiceTile extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Galaxy Tab Tab A7 lite (WiFi)',
+                              productTitle,
                               overflow: TextOverflow.ellipsis,
                               style: TextStyle(
                                 color: AppColors.darkBlueColor,
@@ -63,7 +74,7 @@ class ServiceTile extends StatelessWidget {
                       child: Row(
                         children: [
                           RatingBarIndicator(
-                            rating: 3,
+                            rating: starCount,
                             itemBuilder: (context, index) => Icon(
                               Icons.star,
                               color: Colors.amber,
@@ -94,7 +105,7 @@ class ServiceTile extends StatelessWidget {
                                         ),
                                       ),
                                       TextSpan(
-                                        text: 'Good',
+                                        text: productStatus? 'Good':'Bad',
                                         style: TextStyle(
                                           color: AppColors.greenColor,
                                             fontWeight: FontWeight.bold),
