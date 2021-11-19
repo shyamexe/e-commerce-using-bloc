@@ -1,3 +1,4 @@
+import 'package:e_commerce/core/constants/strings.dart';
 import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
 import 'package:e_commerce/presentation/screens/add_device/add_device.dart';
 import 'package:e_commerce/presentation/screens/home_screen/home_page.dart';
@@ -32,9 +33,9 @@ class BottumNavigationBar extends StatelessWidget {
           return Scaffold(
             body: _pageOption[state.navigationOrder],
             bottomNavigationBar: ConvexAppBar(
-                color: Colors.green[200],
+                color: AppColors.greenColor,
                 backgroundColor: Colors.white,
-                activeColor: Colors.green,
+                activeColor: AppColors.greenColor,
                 items: const [
                   TabItem(icon: Icons.add, title: 'Add Device'),
                   TabItem(icon: Icons.shopping_bag_outlined, title: 'Shop'),

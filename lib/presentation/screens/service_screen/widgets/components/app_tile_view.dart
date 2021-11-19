@@ -1,4 +1,3 @@
-
 import 'package:e_commerce/core/constants/app_icons.dart';
 import 'package:e_commerce/core/constants/strings.dart';
 import 'package:flutter/material.dart';
