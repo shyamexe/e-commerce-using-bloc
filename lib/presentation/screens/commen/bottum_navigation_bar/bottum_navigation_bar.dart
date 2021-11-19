@@ -1,4 +1,5 @@
 import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
+import 'package:e_commerce/presentation/screens/add_device/add_device.dart';
 import 'package:e_commerce/presentation/screens/home_screen/home_page.dart';
 import 'package:e_commerce/presentation/screens/sales_screen/sales_screen.dart';
 import 'package:e_commerce/presentation/screens/service_screen/service_screen.dart';
@@ -13,7 +14,7 @@ class BottumNavigationBar extends StatelessWidget {
   int selectedPage = 2;
   List<Widget> _pageOption = [
     
-    const ServiceScreen(),
+    const AddDevice(),
     const SalesScreen(),
     const HomePage(),
     const ServiceScreen(),

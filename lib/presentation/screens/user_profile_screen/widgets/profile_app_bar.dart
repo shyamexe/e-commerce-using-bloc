@@ -16,6 +16,10 @@ AppBar ProfileAppbar(BuildContext context) {
     actions: [
       IconButton(
         onPressed: () {},
+        icon: const Icon(Icons.logout_outlined, color: Colors.green,),
+      ),
+      IconButton(
+        onPressed: () {},
         icon: const Icon(Icons.notifications_outlined, color: Colors.green,),
       ),
     ],
