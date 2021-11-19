@@ -30,6 +30,7 @@ class ServiceTile extends StatelessWidget {
       child: Row(
         children: [
           Flexible(
+            fit: FlexFit.tight,
             flex: 1,
             child: Padding(
               padding: const EdgeInsets.all(10),

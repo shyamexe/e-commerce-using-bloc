@@ -53,7 +53,7 @@ AppBar serviceAppbar(BuildContext context) {
               selectedColor: AppColors.greenColor,
               pressedColor: AppColors.greenColor.withOpacity(.29),
               padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-              children: {
+              children: const {
                 0: Text('Available Products'),
                 1: Text('Service History'),
                 2: Text('Open New Ticket'),

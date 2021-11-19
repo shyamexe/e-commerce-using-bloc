@@ -2,6 +2,7 @@ import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
 import 'package:e_commerce/presentation/screens/home_screen/home_page.dart';
 import 'package:e_commerce/presentation/screens/sales_screen/sales_screen.dart';
 import 'package:e_commerce/presentation/screens/service_screen/service_screen.dart';
+import 'package:e_commerce/presentation/screens/user_profile_screen/user_profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,7 +17,7 @@ class BottumNavigationBar extends StatelessWidget {
     const SalesScreen(),
     const HomePage(),
     const ServiceScreen(),
-    const ServiceScreen(),
+    const UserProfileScreen()
   ];
 
   @override
