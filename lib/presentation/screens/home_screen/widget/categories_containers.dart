@@ -17,8 +17,8 @@ class CategoriesContainers extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
       ),
-      elevation: 4,
-      color: Colors.lightGreen.shade700,
+      elevation: 8,
+      color: Colors.white,
       child: InkWell(
         child: SizedBox(
           width: 41.w,
@@ -28,12 +28,12 @@ class CategoriesContainers extends StatelessWidget {
             children: [
               Icon(
                 icon,
-                color: Colors.white,
+                color: Colors.green,
                 size: 32.sp,
               ),
               Text(
                 text,
-                style: TextStyle(color: Colors.white, fontSize: 18.sp),
+                style: TextStyle(color: Colors.green, fontSize: 18.sp),
               )
             ],
           ),
