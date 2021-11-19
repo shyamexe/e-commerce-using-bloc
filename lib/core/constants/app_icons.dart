@@ -33,3 +33,8 @@ class AppImage{
   static const projector = "assets/images/projecter_01.png";
   static const tab1 = "assets/images/tab_01.png";
 }
+class AppUser{
+  //userAvatar
+  static const user1 ="assets/avatar/user1.jpg";
+  static const user2 ="assets/avatar/user2.jpg";
+}
