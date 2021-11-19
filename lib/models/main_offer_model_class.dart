@@ -22,7 +22,7 @@ class MainOffers extends Equatable {
         name: 'Second Add',
         imageUrl: 'assets/images/36673-5-lenovo-desktop-computer.png'
     ),
-    const MainOffers(
+    const MainOffers( 
         name: 'Third Add',
         imageUrl: 'assets/images/32742-2-gaming-computer-photos_400x400.png'
     ),
