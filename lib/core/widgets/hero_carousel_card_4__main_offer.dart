@@ -14,7 +14,7 @@ class HeroCarouselCard4MainOffer extends StatelessWidget {
           borderRadius: const BorderRadius.all(Radius.circular(10.0)),
           child: Stack(
             children: <Widget>[
-              Image.network(
+              Image.asset(
                   mainOffers.imageUrl,
                   fit: BoxFit.cover, width: 1000.0),
               Positioned(
