@@ -18,7 +18,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       // physics: NeverScrollableScrollPhysics(parent:NeverScrollableScrollPhysics()),
       children: [
        

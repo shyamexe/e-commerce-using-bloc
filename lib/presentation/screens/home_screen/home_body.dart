@@ -2,9 +2,12 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_commerce/core/constants/app_icons.dart';
 import 'package:e_commerce/core/widgets/widgets.dart';
+import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
 import 'package:e_commerce/models/models.dart';
+import 'package:e_commerce/presentation/screens/commen/bottum_navigation_bar/bottum_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -116,7 +119,9 @@ class HomeBody extends StatelessWidget {
               height: 11.h,
               text: 'Shop',
               icon: Icons.shopping_bag_outlined,
-              onTap: (){},
+              onTap: (){
+                BlocProvider.of<BottamNavigationCubit>(context).setoder(1);
+              },
             ),
             SizedBox(
               width: 10.sp,
@@ -125,7 +130,10 @@ class HomeBody extends StatelessWidget {
               height: 11.h,
               text: 'Service',
               icon: Icons.video_settings_outlined,
-              onTap: (){},
+              onTap: (){
+                BlocProvider.of<BottamNavigationCubit>(context).setoder(3);
+                
+              },
             ),
           ],
         ),

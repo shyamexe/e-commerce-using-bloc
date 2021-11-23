@@ -59,9 +59,8 @@ AppBar serviceAppbar(BuildContext context) {
                 2: Text('Open New Ticket'),
               },
               onValueChanged: (groupValue) {
-                print(groupValue);
 
-                BlocProvider.of<ServiceselectionCubit>(context).update();
+                BlocProvider.of<ServiceselectionCubit>(context).update(groupValue);
               },
             );
                 },

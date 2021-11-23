@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
 
 part 'serviceselection_state.dart';
 
@@ -9,7 +8,7 @@ class ServiceselectionCubit extends Cubit<ServiceselectionState> {
           pageValue: 0,
         ));
     
-  void update() { 
+  void singleupdate(int val) { 
     if(state.pageValue < 2){
     emit(
         ServiceselectionState(
@@ -17,12 +16,13 @@ class ServiceselectionCubit extends Cubit<ServiceselectionState> {
         ),
       );
     }
-    // else{
-    //   emit(
-    //     ServiceselectionState(
-    //       pageValue: state.pageValue,
-    //     ),
-    //   );
-    // }
+  }
+  void update(int value) { 
+    
+    emit(
+        ServiceselectionState(
+          pageValue: value,
+        ),
+      );
   }
 }
