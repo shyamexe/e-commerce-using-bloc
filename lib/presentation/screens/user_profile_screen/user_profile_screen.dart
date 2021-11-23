@@ -25,7 +25,7 @@ class UserProfileScreen extends StatelessWidget {
             child: AppAvatar(),
           ),
           const Center(
-            child: Text('Shyamjith',
+            child: Text('PM Jesil',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -73,7 +73,9 @@ class UserProfileScreen extends StatelessWidget {
                     )
                   ],
                 ),
-                Divider(thickness: 1,),
+                Divider(
+                  thickness: 1,
+                ),
                 Row(
                   children: [
                     Padding(
@@ -94,18 +96,42 @@ class UserProfileScreen extends StatelessWidget {
                     )
                   ],
                 ),
-                Divider(thickness: 1,),
-                ProfileTile(settingsTitle: 'Bank Account',),
-                Divider(thickness: 1,),
-                ProfileTile(settingsTitle: 'Orders',),
-                Divider(thickness: 1,),
-                ProfileTile(settingsTitle: 'Card And Wallets',),
-                Divider(thickness: 1,),
-                ProfileTile(settingsTitle: 'Contact Us',),
-                Divider(thickness: 1,),
-                ProfileTile(settingsTitle: 'About',),
-                Divider(thickness: 1,),
-                ProfileTile(settingsTitle: 'Logout',),
+                Divider(
+                  thickness: 1,
+                ),
+                ProfileTile(
+                  settingsTitle: 'Bank Account',
+                ),
+                Divider(
+                  thickness: 1,
+                ),
+                ProfileTile(
+                  settingsTitle: 'Orders',
+                ),
+                Divider(
+                  thickness: 1,
+                ),
+                ProfileTile(
+                  settingsTitle: 'Card And Wallets',
+                ),
+                Divider(
+                  thickness: 1,
+                ),
+                ProfileTile(
+                  settingsTitle: 'Contact Us',
+                ),
+                Divider(
+                  thickness: 1,
+                ),
+                ProfileTile(
+                  settingsTitle: 'About',
+                ),
+                Divider(
+                  thickness: 1,
+                ),
+                ProfileTile(
+                  settingsTitle: 'Logout',
+                ),
               ],
             ),
           )
@@ -114,4 +140,3 @@ class UserProfileScreen extends StatelessWidget {
     );
   }
 }
-

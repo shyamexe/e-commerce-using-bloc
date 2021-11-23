@@ -37,4 +37,5 @@ class AppUser{
   //userAvatar
   static const user1 ="assets/avatar/user1.jpg";
   static const user2 ="assets/avatar/user2.jpg";
+  static const user3 ="assets/avatar/user3.jpg";
 }
