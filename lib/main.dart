@@ -12,10 +12,13 @@ import 'logic/debug/app_bloc_observer.dart';
 import 'presentation/router/app_router.dart';
 void main() {
   Bloc.observer = AppBlocObserver();
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
+
+  
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -45,7 +48,8 @@ class App extends StatelessWidget {
             initialRoute: AppRouter.test,
             onGenerateRoute: AppRouter.onGenerateRoute,
           );
-        }),
+        }
+      ),
     );
   }
 }
