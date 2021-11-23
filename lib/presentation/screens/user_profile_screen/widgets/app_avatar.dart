@@ -10,15 +10,13 @@ class AppAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.blue,width: 4),
-        color: Colors.transparent,
-        borderRadius: BorderRadius.circular(150)
-      ),
-      
+          border: Border.all(color: Colors.blue, width: 4),
+          color: Colors.transparent,
+          borderRadius: BorderRadius.circular(150)),
       padding: EdgeInsets.all(3),
       child: CircleAvatar(
         radius: 80,
-        backgroundImage: AssetImage(AppUser.user2),
+        backgroundImage: AssetImage(AppUser.user3),
       ),
     );
   }
