@@ -22,6 +22,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
+    
       providers: [
         BlocProvider<ServiceselectionCubit>(
           create: (context)=>
@@ -41,6 +42,7 @@ class App extends StatelessWidget {
       child: ResponsiveSizer(
         builder: (context, orientation, deviceType) {
           return MaterialApp(
+            
             title: Strings.appTitle,
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,

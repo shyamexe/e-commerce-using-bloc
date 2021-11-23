@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:e_commerce/core/constants/strings.dart';
 import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
 import 'package:e_commerce/presentation/screens/add_device/add_device.dart';
@@ -19,7 +17,7 @@ class BottumNavigationBar extends StatelessWidget {
     const SalesScreen(),
     const HomePage(),
     const ServiceScreen(),
-    const UserProfileScreen()
+    const UserProfileScreen(),
   ];
 
   @override
@@ -32,20 +30,40 @@ class BottumNavigationBar extends StatelessWidget {
           builder: (context, state) {
             return Scaffold(
               body: _pageOption[state.navigationOrder],
-              bottomNavigationBar: ConvexAppBar(
-                  color: AppColors.greenColor,
-                  backgroundColor: Colors.white,
-                  activeColor: AppColors.greenColor,
-                  items: const [
-                    TabItem(icon: Icons.add, title: 'Add Device'),
-                    TabItem(icon: Icons.shopping_bag_outlined, title: 'Shop'),
-                    TabItem(icon: Icons.home_outlined, title: 'Home'),
-                    TabItem(
-                        icon: Icons.video_settings_outlined, title: 'Service'),
-                    TabItem(icon: Icons.person_outline, title: 'User'),
+              bottomNavigationBar: BottomNavigationBar(
+                  // color: AppColors.greenColor,
+                  // activeColor: AppColors.greenColor,
+                  items: const <BottomNavigationBarItem>[
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.add),
+                      label: 'Add Device',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.shopping_bag_outlined),
+                      label: 'Shop',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.home_outlined),
+                      label: 'Home',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.video_settings_outlined),
+                      label: 'Service',
+                    ),
+                    BottomNavigationBarItem(
+                      icon: Icon(Icons.person_outline),
+                      label: 'User',
+                    ),
                   ],
-                  
-                  initialActiveIndex: state.navigationOrder,
+                  // selectedItemColor: Colors.amber[800],
+                  type: BottomNavigationBarType.fixed,
+                  selectedFontSize: 14,
+                  unselectedFontSize: 14,
+                  showUnselectedLabels: true,
+                  unselectedItemColor: AppColors.greenColor,
+                  selectedItemColor: Colors.blue,
+                  currentIndex: state.navigationOrder,
+                  elevation: 15,
                   onTap: (int index) {
                     BlocProvider.of<BottamNavigationCubit>(context)
                         .setoder(index);
