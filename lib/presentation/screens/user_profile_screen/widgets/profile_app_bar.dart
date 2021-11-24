@@ -17,11 +17,11 @@ AppBar ProfileAppbar(BuildContext context) {
     actions: [
       IconButton(
         onPressed: () {},
-        icon: const Icon(Icons.logout_outlined, color: Colors.green,),
+        icon: Icon(Icons.logout_outlined, color: AppColors.darkBlueColor,),
       ),
       IconButton(
         onPressed: () {},
-        icon: const Icon(Icons.notifications_outlined, color: Colors.green,),
+        icon: Icon(Icons.notifications_outlined, color: AppColors.darkBlueColor,),
       ),
     ],
   );

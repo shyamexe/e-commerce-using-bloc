@@ -17,7 +17,7 @@ AppBar serviceAppbar(BuildContext context) {
       ),
     ),
     leading: IconButton(
-        color: AppColors.greenColor,
+        color: AppColors.darkBlueColor,
         onPressed: () {
           //  return Navigator.of(context).pop();
         },
@@ -27,14 +27,14 @@ AppBar serviceAppbar(BuildContext context) {
         onPressed: () {},
         icon: SvgPicture.asset(
           AppIcons.barCodeIcon,
-          color: AppColors.greenColor,
+          color: AppColors.darkBlueColor,
         ),
       ),
       IconButton(
         onPressed: () {},
         icon: SvgPicture.asset(
           AppIcons.searchIcon,
-          color: AppColors.greenColor,
+          color: AppColors.darkBlueColor,
         ),
       ),
     ],
