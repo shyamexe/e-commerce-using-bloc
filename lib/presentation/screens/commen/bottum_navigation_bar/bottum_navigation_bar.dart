@@ -61,7 +61,7 @@ class BottumNavigationBar extends StatelessWidget {
                   unselectedFontSize: 14,
                   showUnselectedLabels: true,
                   unselectedItemColor: AppColors.greenColor,
-                  selectedItemColor: Colors.blue,
+                  selectedItemColor: AppColors.ligthBlue,
                   currentIndex: state.navigationOrder,
                   elevation: 15,
                   onTap: (int index) {

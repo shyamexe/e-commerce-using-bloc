@@ -24,12 +24,12 @@ class UserProfileScreen extends StatelessWidget {
             alignment: Alignment.topCenter,
             child: AppAvatar(),
           ),
-          const Center(
-            child: Text('PM Jesil',
+           Center(
+            child: Text('Shyamjith',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
-                  color: Colors.blue,
+                  color: AppColors.ligthBlue,
                 )),
           ),
           TextButton(

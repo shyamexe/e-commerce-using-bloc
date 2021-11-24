@@ -8,7 +8,7 @@ class AddDevice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: DeviceAppBar(context),
+      appBar: deviceAppBar(context),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

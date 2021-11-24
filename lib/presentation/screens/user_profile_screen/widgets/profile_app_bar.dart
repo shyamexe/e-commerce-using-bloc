@@ -1,3 +1,4 @@
+import 'package:e_commerce/core/constants/strings.dart';
 import 'package:flutter/material.dart';
 
 AppBar ProfileAppbar(BuildContext context) {
@@ -9,7 +10,7 @@ AppBar ProfileAppbar(BuildContext context) {
       'Profile',
       style: TextStyle(fontSize: 25,
         fontWeight: FontWeight.bold,
-        color: Colors.indigo[900],
+        color: AppColors.darkBlueColor,
       ),
     ),
   

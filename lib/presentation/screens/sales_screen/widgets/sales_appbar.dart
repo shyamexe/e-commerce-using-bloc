@@ -6,15 +6,12 @@ import 'package:flutter_svg/svg.dart';
 AppBar salesAppBar(BuildContext context) {
   return AppBar(
     elevation: 0,
-    backgroundColor: Colors.white,
+    backgroundColor: AppColors.whiteColor,
     leading: IconButton(
       onPressed: () {
         return Navigator.of(context).pop();
       },
-      icon: SvgPicture.asset(
-        AppIcons.backArrow,
-        color: AppColors.darkBlueColor,
-      ),
+      icon: Icon(Icons.menu_rounded,color: AppColors.darkBlueColor)
     ),
     title: Text(
       "SHOP",

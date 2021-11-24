@@ -61,7 +61,7 @@ class ServiceTile extends StatelessWidget {
                             ),
                           ),
                           IconButton(
-                            color: Colors.red,
+                            color: productFavoriteFlag? AppColors.redColor:AppColors.greyColor,
                             splashColor: Colors.transparent,
                             onPressed: () {},
                             icon: Icon(Icons.favorite),

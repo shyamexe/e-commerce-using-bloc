@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_commerce/core/constants/app_icons.dart';
+import 'package:e_commerce/core/constants/strings.dart';
 import 'package:e_commerce/core/widgets/widgets.dart';
 import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
 import 'package:e_commerce/models/models.dart';
@@ -26,7 +27,7 @@ class HomeBody extends StatelessWidget {
             borderRadius: BorderRadius.circular(15.0),
           ),
           color: Colors.white,
-          shadowColor: Colors.grey,
+          shadowColor: AppColors.greyColor,
           elevation: 4,
           child: SizedBox(
             width: 94.w,
@@ -60,28 +61,28 @@ class HomeBody extends StatelessWidget {
         ),
         Row(
           children: [
-            const Text(
+            Text(
               "Welcome ",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 35,
-                  color: Colors.green),
+                  color: AppColors.greenColor),
             ),
             SvgPicture.asset(
               AppIcons.byeIcon,
               height: 5.h,
-              color: Colors.redAccent,
+              color: AppColors.ligthBlue,
             ),
           ],
         ),
         SizedBox(
           height: 0.5.h,
         ),
-        const Align(
+         Align(
             alignment: Alignment.topLeft,
             child: Text(
               "Need a helping hand today?..",
-              style: TextStyle(color: Colors.grey),
+              style: TextStyle(color: AppColors.darkGreyColor),
             )),
         Container(
             child: CarouselSlider(
@@ -101,12 +102,12 @@ class HomeBody extends StatelessWidget {
         SizedBox(
           height: 0.5.h,
         ),
-        const Align(
+        Align(
             alignment: Alignment.topLeft,
             child: Text(
               "Category",
               style: TextStyle(
-                  color: Colors.green,
+                  color: AppColors.greenColor,
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
             )),
@@ -162,12 +163,12 @@ class HomeBody extends StatelessWidget {
         SizedBox(
           height: 0.5.h,
         ),
-        const Align(
+        Align(
             alignment: Alignment.topLeft,
             child: Text(
               "Deal of Today",
               style: TextStyle(
-                  color: Colors.green,
+                  color: AppColors.greenColor,
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
             )),

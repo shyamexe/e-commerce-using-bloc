@@ -8,7 +8,7 @@ class ServiceselectionCubit extends Cubit<ServiceselectionState> {
           pageValue: 0,
         ));
     
-  void singleupdate(int val) { 
+  void singleupdate() { 
     if(state.pageValue < 2){
     emit(
         ServiceselectionState(

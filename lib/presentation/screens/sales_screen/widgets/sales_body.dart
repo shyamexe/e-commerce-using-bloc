@@ -9,14 +9,14 @@ import 'package:e_commerce/data/models/items.dart';
 
 Widget salesBody(BuildContext context) {
   DisplayItems items = DisplayItems();
-  String textVal = "";
+  String textVal = "dfgfxg";
   TextEditingController testtext = TextEditingController();
   return SingleChildScrollView(
     child: Padding(
       padding: EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           BlocBuilder<SalesCubit, SalesState>(
@@ -25,7 +25,7 @@ Widget salesBody(BuildContext context) {
                 child: Center(
                     child: Text(
                   "$textVal".toUpperCase(),
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(color: Colors.blue, fontSize: 20),
                 )),
                 height: 140,
                 width: 500,
@@ -43,10 +43,12 @@ Widget salesBody(BuildContext context) {
             height: 80,
             width: double.infinity,
             child: ListView.builder(
+              physics: BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: items.item.length,
               itemBuilder: (context, index) {
                 return Row(
+
                   children: [
                     CustomListView(
                       productName: items.item[index].imageText,
@@ -71,7 +73,7 @@ Widget salesBody(BuildContext context) {
                     color: AppColors.darkBlueColor,
                     fontWeight: FontWeight.bold),
               ),
-              Text("See all",style: TextStyle(fontSize: 16,color: AppColors.greenColor),),
+              Text("See all",style: TextStyle(fontSize: 16,color: AppColors.ligthBlue),),
             ],
           ),
           const SizedBox(height: 10,),
@@ -80,21 +82,22 @@ Widget salesBody(BuildContext context) {
             width: double.infinity,
             child: ListView(
               scrollDirection: Axis.horizontal,
-              children: [
+              children: const <Widget>[
                 ReuseCardContainer(
                     image: AppImage.lapTo1,
                     headText: "Toshiba",
                     price: "Rs.32000",
                     mrp: "Rs.42000"),
-                const SizedBox(
+                 SizedBox(
                   width: 10,
                 ),
                 ReuseCardContainer(
+
                     image: AppImage.lapTop2,
                     headText: "Samsung",
                     price: "Rs.38000",
                     mrp: "Rs.52000"),
-                const SizedBox(
+                 SizedBox(
                   width: 10,
                 ),
                 ReuseCardContainer(
@@ -102,7 +105,7 @@ Widget salesBody(BuildContext context) {
                     headText: "Espon",
                     price: "Rs.22000",
                     mrp: "Rs.32000"),
-                const SizedBox(
+                 SizedBox(
                   width: 10,
                 ),
                 ReuseCardContainer(

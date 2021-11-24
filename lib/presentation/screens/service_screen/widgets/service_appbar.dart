@@ -9,7 +9,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 AppBar serviceAppbar(BuildContext context) {
   return AppBar(
     elevation: 0,
-    backgroundColor: Colors.white,
+    backgroundColor: AppColors.whiteColor,
     title: Text(
       'SERVICES',
       style: TextStyle(
@@ -17,7 +17,7 @@ AppBar serviceAppbar(BuildContext context) {
       ),
     ),
     leading: IconButton(
-        color: AppColors.darkBlueColor,
+        color: AppColors.greenColor,
         onPressed: () {
           //  return Navigator.of(context).pop();
         },
@@ -27,14 +27,14 @@ AppBar serviceAppbar(BuildContext context) {
         onPressed: () {},
         icon: SvgPicture.asset(
           AppIcons.barCodeIcon,
-          color: AppColors.darkBlueColor,
+          color: AppColors.greenColor,
         ),
       ),
       IconButton(
         onPressed: () {},
         icon: SvgPicture.asset(
           AppIcons.searchIcon,
-          color: AppColors.darkBlueColor,
+          color: AppColors.greenColor,
         ),
       ),
     ],

@@ -3,7 +3,7 @@ import 'package:e_commerce/core/constants/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-AppBar DeviceAppBar(BuildContext context) {
+AppBar deviceAppBar(BuildContext context) {
   return AppBar(
     elevation: 0,
     backgroundColor: Colors.white,

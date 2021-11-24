@@ -17,13 +17,13 @@ class ServiceScreen extends StatelessWidget {
     return Scaffold(
       appBar: serviceAppbar(context),
       body: Body(),
-      // // floatingActionButton: FloatingActionButton(
-      // //   child: Icon(Icons.accessibility_outlined),
-      // //   backgroundColor: AppColors.greenColor,
-      // //   onPressed: () {
-      // //     BlocProvider.of<ServiceselectionCubit>(context).update();     
-      // //   },
-      // ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.navigate_next_rounded,size: 30,),
+        backgroundColor: AppColors.greenColor,
+        onPressed: () {
+          BlocProvider.of<ServiceselectionCubit>(context).singleupdate();     
+        },
+      ),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:e_commerce/core/constants/strings.dart';
 import 'package:flutter/material.dart';
 
 AppBar homeAppbar(BuildContext context) {
@@ -5,29 +6,29 @@ AppBar homeAppbar(BuildContext context) {
     elevation: 0,
     backgroundColor: Colors.transparent,
     title: Text(
-      'E SQUARE',
+      'E COMMERCE',
       style: TextStyle(fontSize: 28,
         fontWeight: FontWeight.bold,
-        color: Colors.indigo[900],
+        color: AppColors.darkBlueColor,
       ),
     ),
     leading: IconButton(
       onPressed: () {},
       icon: const Icon(Icons.menu_rounded),
-      color: Colors.green,
+      color: AppColors.darkBlueColor,
     ),
     actions: [
       IconButton(
         onPressed: () {},
-        icon: const Icon(Icons.qr_code_scanner_outlined, color: Colors.green,),
+        icon:  Icon(Icons.qr_code_scanner_outlined, color: AppColors.darkBlueColor,),
       ),
       IconButton(
         onPressed: () {},
-        icon: const Icon(Icons.shopping_cart_outlined, color: Colors.green,),
+        icon:  Icon(Icons.shopping_cart_outlined, color: AppColors.darkBlueColor,),
       ),
       IconButton(
         onPressed: () {},
-        icon: const Icon(Icons.notifications_outlined, color: Colors.green,),
+        icon:  Icon(Icons.notifications_outlined, color: AppColors.darkBlueColor,),
       ),
     ],
   );

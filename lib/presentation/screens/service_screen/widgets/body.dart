@@ -1,14 +1,7 @@
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:e_commerce/core/constants/app_icons.dart';
-import 'package:e_commerce/core/constants/strings.dart';
-import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
-import 'components/app_tile_View.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+
 
 import 'components/service_tile.dart';
 
@@ -23,7 +16,7 @@ class Body extends StatelessWidget {
       children: [
        
         ServiceTile(
-          productFavoriteFlag: true,
+          productFavoriteFlag: false,
           productIcon: AppImage.lapTo1,
           productStatus: false,
           productTitle: 'lenovo laptop intel i5 1dx001',
@@ -44,7 +37,7 @@ class Body extends StatelessWidget {
           starCount: 5,
         ),
         ServiceTile(
-          productFavoriteFlag: true,
+          productFavoriteFlag: false,
           productIcon: AppImage.lapTop2,
           productStatus: false,
           productTitle: 'Hp laptop intel i5 1dx001',
@@ -58,7 +51,7 @@ class Body extends StatelessWidget {
           starCount: 3,
         ),
         ServiceTile(
-          productFavoriteFlag: true,
+          productFavoriteFlag: false,
           productIcon: AppImage.tab1,
           productStatus: true,
           productTitle: 'lenova tab 7 inch',

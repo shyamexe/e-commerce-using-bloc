@@ -20,10 +20,11 @@ class ReuseCardContainer extends StatelessWidget {
       height: 200,
       width: 120,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
+          
           Radius.circular(10),
         ),
-        border: Border.all(width: 1),
+        border: Border.all(width: 1,color: AppColors.greyColor),
       ),
       child: Column(
         children: [
@@ -33,7 +34,7 @@ class ReuseCardContainer extends StatelessWidget {
                 height: 40,
                 child: Image.asset(
                   image,
-                  fit: BoxFit.fill,
+                  fit: BoxFit.contain,
                 )),
           ),
           Text(
@@ -42,11 +43,14 @@ class ReuseCardContainer extends StatelessWidget {
           ),
           Text(
             price,
-            style: TextStyle(fontSize: 18, color: Colors.orange),
+            style: TextStyle(fontSize: 18, color: AppColors.ligthBlue),
           ),
           Text(
             mrp,
-            style: TextStyle(fontSize: 18, color: Colors.red,decoration: TextDecoration.lineThrough ),
+            style: TextStyle(
+                fontSize: 18,
+                color: AppColors.darkGreyColor.withOpacity(.80),
+                decoration: TextDecoration.lineThrough),
           ),
         ],
       ),
