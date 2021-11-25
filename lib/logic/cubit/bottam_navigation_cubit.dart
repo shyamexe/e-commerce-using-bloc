@@ -5,12 +5,14 @@ import 'package:equatable/equatable.dart';
 part 'bottam_navigation_state.dart';
 
 class BottamNavigationCubit extends Cubit<BottamNavigationState> {
-  BottamNavigationCubit()
+  ServiceselectionCubit serviceselectionCubit;
+  BottamNavigationCubit(this.serviceselectionCubit)
       : super(BottamNavigationState(
-          navigationOrder: 2,
+          navigationOrder: 2, //currentSdcreen: 0,
         ));
 
   void setoder(int value) {
-    emit(BottamNavigationState(navigationOrder: state.navigationOrder = value));
+    
+    emit(BottamNavigationState(navigationOrder: value,));
   }
 }

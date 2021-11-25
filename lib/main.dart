@@ -1,5 +1,6 @@
 
 import 'package:e_commerce/logic/cubit/sales_cubit.dart';
+import 'package:e_commerce/logic/cubit/selected_product_cubit.dart';
 
 import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,7 @@ class App extends StatelessWidget {
     return MultiBlocProvider(
     
       providers: [
+      
         BlocProvider<ServiceselectionCubit>(
           create: (context)=>
               ServiceselectionCubit(),
@@ -35,8 +37,12 @@ class App extends StatelessWidget {
 
         BlocProvider<BottamNavigationCubit>(
           create: (context)=>
-              BottamNavigationCubit(),
+              BottamNavigationCubit(BlocProvider.of<ServiceselectionCubit>(context)),
         ),
+        BlocProvider<SelectedProductCubit>(
+         create: (context)=>
+            SelectedProductCubit(),
+         ),
       ],
 
       child: ResponsiveSizer(

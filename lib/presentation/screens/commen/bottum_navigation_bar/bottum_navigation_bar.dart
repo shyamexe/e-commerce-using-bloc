@@ -1,5 +1,7 @@
 import 'package:e_commerce/core/constants/strings.dart';
 import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
+import 'package:e_commerce/logic/cubit/selected_product_cubit.dart';
+import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:e_commerce/presentation/screens/add_device/add_device.dart';
 import 'package:e_commerce/presentation/screens/home_screen/home_page.dart';
 import 'package:e_commerce/presentation/screens/sales_screen/sales_screen.dart';
@@ -19,6 +21,7 @@ class BottumNavigationBar extends StatelessWidget {
     const HomePage(),
     const ServiceScreen(),
     const UserProfileScreen(),
+    const ProductDetails(),
   ];
 
   @override
@@ -27,48 +30,54 @@ class BottumNavigationBar extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: BlocBuilder<BottamNavigationCubit, BottamNavigationState>(
-          builder: (context, state) {
-            return Scaffold(
-              body: _pageOption[state.navigationOrder],
-              bottomNavigationBar: BottomNavigationBar(
-                  // color: AppColors.greenColor,
-                  // activeColor: AppColors.greenColor,
-                  items: const <BottomNavigationBarItem>[
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.add),
-                      label: 'Add Device',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.shopping_bag_outlined),
-                      label: 'Shop',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.home_outlined),
-                      label: 'Home',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.video_settings_outlined),
-                      label: 'Service',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.person_outline),
-                      label: 'User',
-                    ),
-                  ],
-                  // selectedItemColor: Colors.amber[800],
-                  type: BottomNavigationBarType.fixed,
-                  selectedFontSize: 14,
-                  unselectedFontSize: 14,
-                  showUnselectedLabels: true,
-                  unselectedItemColor: AppColors.greenColor,
-                  selectedItemColor: AppColors.ligthBlue,
-                  currentIndex: state.navigationOrder,
-                  elevation: 15,
-                  onTap: (int index) {
-                    BlocProvider.of<BottamNavigationCubit>(context)
-                        .setoder(index);
-                  }),
+        home: BlocBuilder<ServiceselectionCubit, ServiceselectionState>(
+          builder: (context, stateA) {
+            return BlocBuilder<BottamNavigationCubit, BottamNavigationState>(
+              builder: (context, state) {
+                return Scaffold(
+                  body: stateA.pageValue != 1
+                      ? _pageOption[state.navigationOrder]
+                      : _pageOption[5],
+                  bottomNavigationBar: BottomNavigationBar(
+                      // color: AppColors.greenColor,
+                      // activeColor: AppColors.greenColor,
+                      items: const <BottomNavigationBarItem>[
+                        BottomNavigationBarItem(
+                          icon: Icon(Icons.add),
+                          label: 'Add Device',
+                        ),
+                        BottomNavigationBarItem(
+                          icon: Icon(Icons.shopping_bag_outlined),
+                          label: 'Shop',
+                        ),
+                        BottomNavigationBarItem(
+                          icon: Icon(Icons.home_outlined),
+                          label: 'Home',
+                        ),
+                        BottomNavigationBarItem(
+                          icon: Icon(Icons.video_settings_outlined),
+                          label: 'Service',
+                        ),
+                        BottomNavigationBarItem(
+                          icon: Icon(Icons.person_outline),
+                          label: 'User',
+                        ),
+                      ],
+                      // selectedItemColor: Colors.amber[800],
+                      type: BottomNavigationBarType.fixed,
+                      selectedFontSize: 14,
+                      unselectedFontSize: 14,
+                      showUnselectedLabels: true,
+                      unselectedItemColor: AppColors.greenColor,
+                      selectedItemColor: AppColors.ligthBlue,
+                      currentIndex: state.navigationOrder,
+                      elevation: 15,
+                      onTap: (int index) {
+                        BlocProvider.of<BottamNavigationCubit>(context)
+                            .setoder(index);
+                      }),
+                );
+              },
             );
           },
         ));
