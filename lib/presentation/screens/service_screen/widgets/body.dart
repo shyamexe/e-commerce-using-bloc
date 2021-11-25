@@ -18,10 +18,10 @@ class Body extends StatelessWidget {
         press: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (ctx)=> ProductDetails()
+            builder: (context)=> ProductDetails(index: index,)
             ),
         ),
-      ),
+      )
     );
   }
 }

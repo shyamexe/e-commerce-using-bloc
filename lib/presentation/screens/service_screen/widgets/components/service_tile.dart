@@ -20,8 +20,12 @@ class ServiceTile extends StatelessWidget {
       onTap: press,
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        decoration:
-            BoxDecoration(border: Border.all(color: AppColors.greyColor)),
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: AppColors.greyColor,
+          ),
+          borderRadius: BorderRadius.circular(5)
+        ),
         // width: 2.w,    //It will take a 20% of screen width
         height: 100,
         child: Row(
@@ -58,7 +62,9 @@ class ServiceTile extends StatelessWidget {
                               ),
                             ),
                             IconButton(
-                              color: ownedProducts.productFlag ? AppColors.redColor:AppColors.greyColor,
+                              color: ownedProducts.productFlag
+                                  ? AppColors.redColor
+                                  : AppColors.greyColor,
                               splashColor: Colors.transparent,
                               onPressed: () {},
                               icon: Icon(Icons.favorite),
@@ -91,7 +97,7 @@ class ServiceTile extends StatelessWidget {
                                     const EdgeInsets.only(right: 8, left: 10),
                                 height: 50,
                                 width: 100,
-                                child:  Center(
+                                child: Center(
                                   child: Text.rich(
                                     TextSpan(
                                       children: [
@@ -99,13 +105,14 @@ class ServiceTile extends StatelessWidget {
                                           text: 'Product Staus : ',
                                           style: TextStyle(
                                             color: AppColors.darkBlueColor,
-    
                                           ),
                                         ),
                                         TextSpan(
-                                          text: ownedProducts.status? 'Good':'Bad',
+                                          text: ownedProducts.status
+                                              ? 'Good'
+                                              : 'Bad',
                                           style: TextStyle(
-                                            color: AppColors.greenColor,
+                                              color: AppColors.greenColor,
                                               fontWeight: FontWeight.bold),
                                         ),
                                       ],

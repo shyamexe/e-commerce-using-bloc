@@ -4,6 +4,7 @@ import 'package:e_commerce/presentation/screens/add_device/add_device.dart';
 import 'package:e_commerce/presentation/screens/home_screen/home_page.dart';
 import 'package:e_commerce/presentation/screens/sales_screen/sales_screen.dart';
 import 'package:e_commerce/presentation/screens/service_screen/service_screen.dart';
+import 'package:e_commerce/presentation/screens/service_screen/widgets/components/product_details.dart';
 import 'package:e_commerce/presentation/screens/user_profile_screen/user_profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class BottumNavigationBar extends StatelessWidget {
   ];
 
   @override
-  Widget build(BuildContext ctx) {
+  Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
           primarySwatch: Colors.blue,
