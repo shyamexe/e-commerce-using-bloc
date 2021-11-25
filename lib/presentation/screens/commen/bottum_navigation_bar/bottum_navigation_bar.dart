@@ -21,7 +21,7 @@ class BottumNavigationBar extends StatelessWidget {
   ];
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext ctx) {
     return MaterialApp(
         theme: ThemeData(
           primarySwatch: Colors.blue,
