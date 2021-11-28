@@ -1,8 +1,8 @@
 import 'package:e_commerce/logic/cubit/selected_product_cubit.dart';
+import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:e_commerce/models/owned_product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:e_commerce/core/constants/strings.dart';
 import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
 import 'package:e_commerce/presentation/screens/commen/bottum_navigation_bar/bottom_navigation.dart';
@@ -10,11 +10,8 @@ import 'package:e_commerce/presentation/screens/service_screen/widgets/service_a
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class ProductDetails extends StatelessWidget {
-  
-
   const ProductDetails({
     Key? key,
-    
   }) : super(key: key);
 
   @override
@@ -22,7 +19,6 @@ class ProductDetails extends StatelessWidget {
     return BlocBuilder<SelectedProductCubit, SelectedProductState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: serviceAppbar(context),
           body: Container(
             margin: const EdgeInsets.all(20),
             decoration: BoxDecoration(
@@ -31,6 +27,7 @@ class ProductDetails extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(15)),
             child: ListView(
+              physics: BouncingScrollPhysics(),
               children: <Widget>[
                 Row(
                   children: [
@@ -80,7 +77,8 @@ class ProductDetails extends StatelessWidget {
                                         ),
                                       ),
                                       TextSpan(
-                                        text: ownedProducts[state.selectdItem].status
+                                        text: ownedProducts[state.selectdItem]
+                                                .status
                                             ? 'Good'
                                             : 'Bad',
                                         style: TextStyle(
@@ -97,11 +95,44 @@ class ProductDetails extends StatelessWidget {
                       ),
                     )
                   ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text('Device is out of Warranty'),
+                        ),
+                        decoration: BoxDecoration(
+                            color: AppColors.greenColor.withOpacity(.29),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(6))),
+                      ),
+                      Spacer(),
+                      RaisedButton(
+                        color: AppColors.greenColor,
+                        onPressed: () {
+                          BlocProvider.of<ServiceselectionCubit>(context).singleupdate();
+                        },
+                        child: const Text('Add Complaint',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                const Divider(
+                  thickness: 1,
                 )
               ],
             ),
           ),
-          // bottomNavigationBar: bottomNavigation(),
         );
       },
     );
