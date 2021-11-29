@@ -6,13 +6,16 @@ class OwnedProduct {
    bool status,productFlag;
    double star;
    int? id;
+   
   OwnedProduct({
     required this.title,
     required this.image,
     required this.description,
     required this.status,
     required this.productFlag,
-    required this.star,id,
+    required this.star,
+    this.id,
+   
   });
 }
 
@@ -33,7 +36,7 @@ List<OwnedProduct> ownedProducts= [
     description: dummyText,
     star: 3,
     productFlag: false,
-    status: false, 
+    status: false,
   ),
   OwnedProduct(
     id: 3,
@@ -87,7 +90,7 @@ List<OwnedProduct> ownedProducts= [
     description: dummyText,
     star: 1,
     productFlag: false,
-    status: true, 
+    status: true,
   ),
 ];
 String dummyText =
