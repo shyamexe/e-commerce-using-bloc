@@ -15,7 +15,13 @@ class NewTicket extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: ListView(physics: BouncingScrollPhysics(), children: [
-        Text('Selected Product'),
+        SizedBox(
+          height: 10,
+        ),
+        Text(
+          'Selected Product',
+          style: TextStyle(color: Colors.green),
+        ),
         Container(
           decoration: BoxDecoration(),
         )
