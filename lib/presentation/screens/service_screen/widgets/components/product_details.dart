@@ -359,7 +359,7 @@ class ProductDetails extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: 230,
+                  height: 45,
                 ),
                 const Divider(
                   thickness: 1,

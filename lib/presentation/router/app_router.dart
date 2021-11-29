@@ -18,9 +18,7 @@ class AppRouter {
     switch (settings.name) {
       case home:
         return MaterialPageRoute(
-          builder: (_) => HomePage(
-            
-          ),
+          builder: (_) => HomePage(),
         );
       case service:
         return MaterialPageRoute(
