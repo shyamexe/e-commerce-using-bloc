@@ -14,6 +14,12 @@ class NewTicket extends StatelessWidget {
         ),
         borderRadius: BorderRadius.circular(15),
       ),
+      child: ListView(physics: BouncingScrollPhysics(), children: [
+        Text('Selected Product'),
+        Container(
+          decoration: BoxDecoration(),
+        )
+      ]),
     );
   }
 }

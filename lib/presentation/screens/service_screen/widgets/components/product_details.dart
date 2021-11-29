@@ -213,10 +213,154 @@ class ProductDetails extends StatelessWidget {
                           ),
                         )
                       ],
-                    )
+                    ),
+                    const Divider(
+                      thickness: 1,
+                    ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Text(
+                            'Battary Issue',
+                            style: TextStyle(
+                              color: AppColors.darkBlueColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                        Spacer(),
+                        Container(
+                          margin: const EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              color: AppColors.greenColor.withOpacity(.29),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(6))),
+                          child: Column(
+                            children: [
+                              Text.rich(
+                                TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'Ticket Status : ',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.darkBlueColor,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: ownedProducts[state.selectdItem]
+                                              .status
+                                          ? 'Solved'
+                                          : 'Not Solved',
+                                      style: TextStyle(
+                                          color: AppColors.greenColor,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                      primary: AppColors.greenColor),
+                                  onPressed: () {
+                                    BlocProvider.of<ServiceselectionCubit>(
+                                            context)
+                                        .singleupdate();
+                                  },
+                                  child: const Text(
+                                    'Track',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    const Divider(
+                      thickness: 1,
+                    ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Text(
+                            'Over Heat',
+                            style: TextStyle(
+                              color: AppColors.darkBlueColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                        Spacer(),
+                        Container(
+                          margin: const EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              color: AppColors.greenColor.withOpacity(.29),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(6))),
+                          child: Column(
+                            children: [
+                              Text.rich(
+                                TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'Ticket Status : ',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.darkBlueColor,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: ownedProducts[state.selectdItem]
+                                              .status
+                                          ? 'Solved'
+                                          : 'Not Solved',
+                                      style: TextStyle(
+                                          color: AppColors.greenColor,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                      primary: AppColors.greenColor),
+                                  onPressed: () {
+                                    BlocProvider.of<ServiceselectionCubit>(
+                                            context)
+                                        .singleupdate();
+                                  },
+                                  child: const Text(
+                                    'Track',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ],
                 ),
-                SizedBox(height: 230,),
+                SizedBox(
+                  height: 230,
+                ),
                 const Divider(
                   thickness: 1,
                 ),
@@ -235,14 +379,11 @@ class ProductDetails extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Align(
-                          
                           alignment: Alignment.topLeft,
                           child: Text(
-                           ownedProducts[state.selectdItem].description,
+                            ownedProducts[state.selectdItem].description,
                             style: TextStyle(
-                                color: AppColors.darkGreyColor,
-                                fontSize: 12
-                                ),
+                                color: AppColors.darkGreyColor, fontSize: 12),
                           ),
                         ),
                       ),
