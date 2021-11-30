@@ -18,7 +18,7 @@ class AppRouter {
     switch (settings.name) {
       case home:
         return MaterialPageRoute(
-          builder: (_) => HomePage(),
+          builder: (_) => BottumNavigationBar(),
         );
       case service:
         return MaterialPageRoute(
@@ -31,7 +31,7 @@ class AppRouter {
         );
         case test: 
         return MaterialPageRoute(
-          builder: (_) => BottumNavigationBar(),
+          builder: (_) => HomePage(),
         );
       default:
         throw const RouteException('Route not found!');

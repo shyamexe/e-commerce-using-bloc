@@ -25,7 +25,7 @@ class ProductDetails extends StatelessWidget {
                 border: Border.all(
                   color: AppColors.greyColor,
                 ),
-                borderRadius: BorderRadius.circular(15)),
+                borderRadius: BorderRadius.circular(10)),
             child: ListView(
               physics: BouncingScrollPhysics(),
               children: <Widget>[
@@ -336,6 +336,7 @@ class ProductDetails extends StatelessWidget {
                               SizedBox(
                                 height: 20,
                                 child: ElevatedButton(
+
                                   style: ElevatedButton.styleFrom(
                                       primary: AppColors.greenColor),
                                   onPressed: () {
