@@ -9,7 +9,7 @@ A e-commerce Flutter app using bloc  pattern
    <img src="https://user-images.githubusercontent.com/93277108/144800958-8c9f8536-6523-4c5a-b250-dd6a8b7ea21b.png">
   </td>
   <td>
-   
+   <img src="https://user-images.githubusercontent.com/93277108/144800978-e96b13b8-dba3-449c-b50a-e8d04c852d30.png">
   </td>
   
   
