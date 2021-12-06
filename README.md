@@ -4,7 +4,7 @@ A e-commerce Flutter app using bloc  pattern
 
 ## Screenshots
 
-![sh1!](screenshots\Screenshot1.png)
+[sh1!](screenshots\Screenshot1.png)
 
 ## Getting Started
 
