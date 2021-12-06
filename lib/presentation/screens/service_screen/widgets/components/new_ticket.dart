@@ -1,18 +1,19 @@
+
+
 import 'package:e_commerce/core/constants/strings.dart';
 import 'package:e_commerce/logic/cubit/selected_product_cubit.dart';
-import 'package:e_commerce/main.dart';
 import 'package:e_commerce/models/owned_product.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class NewTicket extends StatelessWidget {
   const NewTicket({Key? key}) : super(key: key);
-  
+
   @override
-  Widget build(BuildContext ctx) {
-    
+  Widget build(BuildContext context) {
     return BlocBuilder<SelectedProductCubit, SelectedProductState>(
       builder: (context, state) {
         return Container(
@@ -41,7 +42,6 @@ class NewTicket extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
               ),
-
               Container(
                 padding: EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
@@ -56,21 +56,20 @@ class NewTicket extends StatelessWidget {
                   // maxLines: null,
                   minLines: 1,
                   maxLines: 5,
-                  
                 ),
               ),
-              SizedBox(height: 60,),
+              const SizedBox(height: 60),
               RaisedButton(
-                        color: AppColors.greenColor,
-                        onPressed: () {
-                         
-                        },
-                        child: const Text(
-                          'Generate Ticket',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                      )
+                color: AppColors.greenColor,
+                onPressed: () {
+                  showAlertDialogBox(context,state);
+                },
+                child: const Text(
+                  'Generate Ticket',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+              )
             ],
           ),
         );
@@ -133,9 +132,100 @@ class NewTicket extends StatelessWidget {
               ],
             ),
           ),
-
         ],
       ),
+    );
+  }
+
+  showAlertDialogBox(BuildContext ctx,state) {
+    // set up the buttons
+    // Widget okayButton =
+    //   Container(
+    //     child: Text('Okay'),
+    //   );
+
+    // set up the AlertDialog
+    AlertDialog alert = AlertDialog(
+      title: Padding(
+        padding: const EdgeInsets.only(top: 50, bottom: 20),
+        child: SvgPicture.asset('assets/icons/alert.svg'),
+      ),
+      content: SizedBox(
+        height: 250,
+        child: Column(
+          children: [
+            Text(
+              'Complaint Registerd Successfully Completed !',textAlign: TextAlign.center,
+              style: TextStyle(
+
+                  color: AppColors.greenColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 20,),
+            Text(
+              'Ticket Number : EQ/09/21/1563',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: AppColors.darkGreyColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              ownedProducts[state.selectdItem].title,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: AppColors.darkGreyColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Complain : HDD not detect',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: AppColors.darkGreyColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 20,),
+            Text(
+              'Our technician contact you with in 30 minutes',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: AppColors.greenColor,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500),
+            ),
+             SizedBox(height: 20,),
+          FlatButton(
+            color: AppColors.greenColor,
+            onPressed: () { 
+               Navigator.of(ctx, rootNavigator: true)
+                  .pop(); 
+             }, 
+             child: Text(
+              'Okay',textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: AppColors.whiteColor,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold),
+            ),
+            
+          )
+          ],
+        ),
+      ),
+      // actions: [
+      //   okayButton,
+      // ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: ctx,
+      builder: (BuildContext ctx) {
+        return alert;
+      },
     );
   }
 }
