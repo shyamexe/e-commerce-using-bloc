@@ -1,6 +1,6 @@
 # e_commerce
 
-A ecommerce Flutter app using bloc.
+A e-commerce Flutter app using bloc.
 
 ## Getting Started
 
