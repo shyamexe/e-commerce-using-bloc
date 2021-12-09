@@ -1,4 +1,3 @@
-import 'package:e_commerce/core/constants/app_icons.dart';
 import 'package:e_commerce/logic/cubit/selected_product_cubit.dart';
 import 'package:e_commerce/logic/cubit/serviceselection_cubit.dart';
 import 'package:e_commerce/models/owned_product.dart';

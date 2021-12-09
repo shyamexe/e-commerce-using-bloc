@@ -4,9 +4,6 @@ import 'package:e_commerce/models/owned_product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:e_commerce/core/constants/strings.dart';
-import 'package:e_commerce/logic/cubit/bottam_navigation_cubit.dart';
-import 'package:e_commerce/presentation/screens/commen/bottum_navigation_bar/bottom_navigation.dart';
-import 'package:e_commerce/presentation/screens/service_screen/widgets/service_appbar.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class ProductDetails extends StatelessWidget {

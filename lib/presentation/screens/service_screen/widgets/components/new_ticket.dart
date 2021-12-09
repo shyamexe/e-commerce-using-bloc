@@ -1,5 +1,3 @@
-
-
 import 'package:e_commerce/core/constants/strings.dart';
 import 'package:e_commerce/logic/cubit/selected_product_cubit.dart';
 import 'package:e_commerce/models/owned_product.dart';
